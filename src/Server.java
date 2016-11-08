@@ -27,6 +27,7 @@ public class Server {
             MyRemoteImp mrsrv = new MyRemoteImp("noname");
             MyRemote stub
                     = (MyRemote) UnicastRemoteObject.exportObject(mrsrv, 0);
+            System.err.println("Get registry");
             // Locate Registry & Bind object's stub in the registry
             registry = LocateRegistry.getRegistry();
             // parametro opcional: int porto

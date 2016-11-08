@@ -23,7 +23,7 @@ public class Client {
         String host = (args.length < 1) ? null : args[0];
         try {
             Registry registry = LocateRegistry.getRegistry(host);
-            MyRemoteImp stub = (MyRemoteImp) registry.lookup("Hello");
+            MyRemoteImp stub = (MyRemoteImp) registry.lookup("MyRemoteSrv");
             String response = stub.getMessage();
             System.out.println("response: " + response);
         } catch (Exception e) {

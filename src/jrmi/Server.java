@@ -6,8 +6,6 @@ package jrmi;
  * and open the template in the editor.
  */
 
-import jrmi.MyRemoteImp;
-import jrmi.MyRemote;
 import java.rmi.registry.Registry;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.RemoteException;

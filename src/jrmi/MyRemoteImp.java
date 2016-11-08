@@ -7,10 +7,6 @@ package jrmi;
  */
 
 
-import jrmi.MyRemote;
-import java.rmi.Remote;
-import java.rmi.RemoteException;
-
 /**
  *
  * @author diogo

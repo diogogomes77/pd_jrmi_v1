@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package jrmi_server;
+package jrmi;
 
 import java.rmi.Remote;
 import java.rmi.RemoteException;

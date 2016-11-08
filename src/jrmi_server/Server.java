@@ -5,6 +5,8 @@
  */
 package jrmi_server;
 
+import jrmi.MyRemoteImp;
+import jrmi.MyRemote;
 import java.rmi.registry.Registry;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.RemoteException;

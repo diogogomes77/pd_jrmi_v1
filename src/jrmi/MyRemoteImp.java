@@ -23,6 +23,7 @@ public class MyRemoteImp implements MyRemote{
     @Override
     public void setMessage(String s) {
         msg = s;
+        System.out.println("Msg currently in the object: " + s);
     }
 
     public MyRemoteImp(String s) {

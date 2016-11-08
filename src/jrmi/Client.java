@@ -13,21 +13,26 @@ package jrmi;
  */
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
+import java.util.Scanner;
 
 public class Client {
 
-    private Client() {}
+   public static void main(String[] args) {
+      Scanner sc = new Scanner(System.in);
+      String host = (args.length < 1) ? null : args[0];
+      try {
+         Registry registry = LocateRegistry.getRegistry(host);
+         MyRemote mrstub = (MyRemote) registry.lookup("MyRemoteSrv");
+         String s = mrstub.getMessage();
+         System.out.println("\nMsg currently in the object: " + s);
+         System.out.print("Write new msg -> ");
+         s = sc.nextLine();
+         mrstub.setMessage(s);
+         System.out.println("Msg currently in the object: " + s);
 
-    public static void main(String[] args) {
 
-        String host = (args.length < 1) ? null : args[0];
-        try {
-            Registry registry = LocateRegistry.getRegistry(host);
-            MyRemote stub = (MyRemote) registry.lookup("MyRemoteSrv");
-            String response = stub.getMessage();
-            System.out.println("response: " + response);
         } catch (Exception e) {
-            System.err.println("Client exception: " + e.toString());
+            System.err.println("Client exception:\n" + e.toString());
             e.printStackTrace();
         }
     }

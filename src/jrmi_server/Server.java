@@ -30,7 +30,7 @@ public class Server {
                     = (MyRemote) UnicastRemoteObject.exportObject(mrsrv, 0);
             // Locate Registry & Bind object's stub in the registry
             registry = LocateRegistry.getRegistry();
-            // parâmetro opcional: int porto
+            // parametro opcional: int porto
             registry.bind("MyRemoteSrv", stub);
             System.err.println("Object bound name \"MyRemoteSrv\"");
         } catch (Exception e) {

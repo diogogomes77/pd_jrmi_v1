@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package jrmi_client;
+
 
 /**
  *
@@ -11,8 +11,6 @@ package jrmi_client;
  */
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
-import jrmi.MyRemoteImp;
-import jrmi.MyRemote;
 
 public class Client {
 
